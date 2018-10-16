@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+       
+        <title>TODO supply a title</title>
+        
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="w3.css">
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    
+  
+        
+    <style>
+        
+        
+        body
+        {
+          /*background:url("images/46.jpg") center no-repeat;*/
+          height:100vh;
+          background-size: cover;
+          border: 2px solid;
+        }
+        
+        form
+          {
+             background-image: url("a.jpeg") ;
+           /*background-image: url("images/27.jpg");*/
+            background-size: cover;
+            /*background-color:#151e2761;;*/
+            padding: 10px;
+            padding-bottom: 30px;
+            margin-top: 30px;
+            color:white;
+            box-shadow: 7px 5px 3px red;
+            border-radius:5px;
+
+          }
+
+        
+    </style>
+    
+    <!--<body style=background-color:grey>-->
+    
+    <body> 
+        
+    <include page="header.jsp"/>
+        
+        <form action="insert.jsp" method="POST" style=text-align:center>
+           
+            <br>
+            
+             <tbody>
+                <div>
+                
+                ID:
+                
+                
+                <td><input type="text" name="id" placeholder="ID"></td>
+              
+                </div>
+            <br>
+            <div>
+                NMAE:
+                <input type="text" name="name" placeholder="EnterName" />
+            </div>
+            <br>
+            <div>
+                ADDRESS:   
+               <input type="text" name="add" placeholder="Address"/>
+            </div>
+            <br>
+            <div>
+                AGE:
+                <input type="text" name="age" placeholder="AGE">
+            </div>
+            <br>
+            <div>
+                CLASS:
+                <select name="class">
+                    <option>First Semester</option>
+                    <option>SecondSemester</option>
+                    <option>Third Semester</option>
+                    <option>Forth Semester</option>
+                    <option>Fifth Semester</option>
+                    <option>Sixth Semester</option>
+                </select>
+            </div>
+            <br>
+            
+            <div>
+                ELECTIVE:
+                <select name="elective" multiple="multiple">
+                    
+                    <option>ARTIFICIAL INTILIGENCE</option>
+                    <option>WEB TECNOLOGY</option>
+                    <option>ORACLE</option>
+                    <option>ANDROI DEVELOPMENT</option>
+                    <option>JAVA SERVER PAGES</option>
+                    <option>PHP</option>
+                    <option>COMPUTER NETWORKS</option>
+                    <option>AUTOMATA</option>
+                    
+                </select>
+            </div>
+            
+            <br>
+                    
+            <div>
+                Email:
+                <input type="email" name="mail" placeholder="Emailid"/>
+            </div>
+            
+            <br>
+                       
+            <div>
+                GENDER:
+                <input type="radio" name="GENDER" value="Male" checked="checked" />Male
+                <input type="radio" name="GENDER" value="Female"/>Female
+            </div>
+            
+            <br>
+            <div>
+               DOB:
+               <input type="date" name="dob"/>
+            </div>
+            <br>
+            <div>
+            <input type="submit" name="submit" value="SUBMIT" />
+            <input type="reset" name="reset" value="RESET"/>
+            </div>
+            </tbody>
+           </table>
+            
+        </form>
+    
+</body>
+
+  
+    
+</html>
