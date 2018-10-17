@@ -12,7 +12,7 @@
        <style>
 		   body{
                        
-                                background-image: url("images/solid/2.jpg");
+                                background-image: url("images/solid/9.jpg");
                        
 				font-family: 'Raleway', sans-serif;
 			}
@@ -23,10 +23,17 @@
                         
               .w3-card
             {
-                border-top: 30px;
-                margin-top: 30px;
-                background-color: #79554847!important;  /*#0865925e!important;*/  
-            }          
+                
+                /*border-top: 80px;*/
+                /*margin-top: 90px;*/
+                background-color:#59636b!important;  /*#79554847!important;  #0865925e!important;*/  
+            } 
+            
+            .w3-panel
+            {
+                padding-top: 0px;
+                margin-top:0px; 
+            }
                         
                         
        </style>
@@ -127,18 +134,24 @@
     
     
  <!--<h4><center>REGISTER HERE</center></h4>-->
- <div class="w3-card w3-padding-16 w3-light-gray w3-round" style="width:45%; margin: 40px auto;">
-   <div class="w3-container">
+  
+ 
+ <div class="w3-card   w3-light-gray w3-round" style="width:45%; margin:40px auto;">
+    
+     <div class="w3-panel w3-green w3-round">
+         <h2><center>REGISTER HERE</center></h2>
+     </div>
+     
+     <div class="w3-container">
        
+      
        
-       
-       <div class="w3-text-white">
+       <!--<div class="w3-text-white">
            <h3><center>REGISTER HERE</center></h3>
-       </div>
+       </div>-->
+      
        
-       <div class="w3-row">
-           
-           
+       <div class="w3-row">  
            
            <div class="w3-col">
        

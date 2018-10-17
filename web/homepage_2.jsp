@@ -6,7 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="w3.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-            <title>COPUTER SHOP</title>
+            <title>HOME PAGE</title>
             
             <style>
                 .w3-myfont {
@@ -129,7 +129,7 @@
    <div class="w3-row w3-small w3-border" id="bar2">
        
     <div class="w3-col m5  w3-center">
-      <a  href="admin.jsp" class="w3-mobile  w3-medium">ADMIN</a>
+      <a  href="adminlogin.jsp" class="w3-mobile  w3-medium">ADMIN</a>
     </div>
     <div class="w3-col m2  w3-center">
       <a  href="products.jsp" class="w3-mobile  w3-medium">PRODUCTS</a>
@@ -300,6 +300,9 @@ function showDivs(n)
 
 
 
+    <div style="width:100%;  bottom:0;">   /*position:fixed;*/
+       <%@include file="footer1.jsp"%> 
+    </div>
 
 
     </body>

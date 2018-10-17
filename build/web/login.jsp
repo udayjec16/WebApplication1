@@ -98,7 +98,7 @@
             {
                 border-top: 30px;
                 margin-top: 30px;
-                background-color: #251246cc!important;  /*#0865925e!important;*/  
+                background-color: #40505acf!important;  /*#251246cc!important;  /*#0865925e!important;*/  
             }
         
         #login
