@@ -71,8 +71,9 @@
         
         body
             {
-                background-image: url("images/46.jpg");
+                background-image: url("images/solid/4.jpg");
                 
+                /*background-color:#006633;*/
                 /*C:\Users\chaoshivi\Documents\NetBeansProjects\WebApplication1\web\images*/
                 
                 
@@ -96,9 +97,9 @@
         
         .w3-card
             {
-                border-top: 30px;
-                margin-top: 30px;
-                background-color: #40505acf!important;  /*#251246cc!important;  /*#0865925e!important;*/  
+                border-top: 45px;
+                margin-top: 45px;
+               background-color: #40505a36!important;   /*#40505acf!important;  #251246cc!important;  /*#0865925e!important;*/  
             }
         
         #login
@@ -148,7 +149,7 @@
         
       <a  href="homepage_2.jsp" class="w3-bar-item w3-button w3-mobile w3-green w3-small"><i class="fa fa-home"></i></a>
       
-      <a  class="w3-myfont w3-medium w3-bar-item">C.G.COMPUTERS</a>
+      <a  class="w3-myfont w3-medium w3-bar-item">VITECH COMPUTERS</a>
       
       <!--<img class="w3-bar-item" src="logo4.jpg">-->
       
@@ -172,7 +173,7 @@
    </div>
        
        
- <div class="w3-card  w3-light-gray w3-round"  id="login"  style="width:35%; margin: 30px auto;">
+ <div class="w3-card  w3-light-gray w3-round"  id="login"  style="width:30%; margin: 45px auto;">
     <div class="w3-container">
     
    <!--<div class="w3-text-white">
@@ -180,10 +181,10 @@
    </div>-->
      
    <div class="imgcontainer" >
-          <img src="images/user.png" alt="Avatar" class="avatar" >
+          <img src="images/user/user12.png" alt="Avatar" class="avatar" >
    </div>
    
-      <form method="POST"  action="loginprocess.jsp" name="form2" id="form2">
+      <form method="POST"  action="adminloginprocess.jsp" name="form2" id="form2">
         
        
         
@@ -203,9 +204,7 @@
         
         <p>
         <input type="submit" name="submit" value="LOGIN" class="w3-btn  w3-block w3-border w3-border-blue w3-round w3-blue">
-           <div  class="w3-text-white" id="newuser">
-                <h5>New User? <a href="userregistration.jsp" class="w3-mobile w3-hover-text-red">Register Here</a></h5>
-           </div>
+           
         </p>
      </form>
        

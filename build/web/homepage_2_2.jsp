@@ -263,15 +263,15 @@
     </div>-->
      
      
-   <div class="w3-card  w3-light-gray w3-round"  id="login"  style="width:35%; margin: 30px auto;">
+<div class="w3-card  w3-light-gray w3-round"  id="login"  style="width:35%; margin: 30px auto;">
    
     
        <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       
-    </div>
+       </div>
        
-       <div class="w3-container">
+<div class="w3-container">
     
    <!--<div class="w3-text-white">
      <h3>LOG IN HERE </h3>
@@ -326,15 +326,22 @@
   
    <div class="w3-row w3-small w3-border" id="bar2">
        
-    <div class="w3-col m5  w3-center">
+       
+       <button onclick="document.getElementById('id01').style.display='block'" 
+                class="w3-bar-item w3-button w3-mobile  w3-medium" style="width:auto;">
+        <i class="fa fa-male"></i>Admin</button>
+   
+    <!--<div class="w3-col m5  w3-center">
       <a  href="admin.jsp" class="w3-mobile  w3-medium">ADMIN</a>
-    </div>
-    <div class="w3-col m2  w3-center">
-      <a  href="products.jsp" class="w3-mobile  w3-medium">PRODUCTS</a>
-    </div>
-    <div class="w3-col m5  w3-center">
-        <a  href="aboutus.jsp" class="w3-mobile  w3-medium">ABOUTUS</a>
-    </div>
+    </div>-->
+    
+    
+        <div class="w3-col m2  w3-center">
+          <a  href="products.jsp" class="w3-mobile  w3-medium">PRODUCTS</a>
+        </div>
+        <div class="w3-col m5  w3-center">
+            <a  href="aboutus.jsp" class="w3-mobile  w3-medium">ABOUTUS</a>
+        </div>
    </div>
         
      
@@ -437,15 +444,78 @@
        </div>
     <!--</div>-->
      
-    </form>
-        
-        
-        
-        
     
+    
+    
+    
+
+
+ <div id="id01" class="modal">
+ 
+  
+   <!--<form class="modal-content animate" action="/action_page.php">-->
+   <form class="modal-content animate" method="POST"  action="loginprocess.jsp" name="form2" id="form2">
+   
+    <!--<div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      
+    </div>-->
+     
+     
+<div class="w3-card  w3-light-gray w3-round"  id="login"  style="width:35%; margin: 30px auto;">
+   
+    
+       <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      
+       </div>
+       
+<div class="w3-container">
+    
+   <!--<div class="w3-text-white">
+     <h3>LOG IN HERE </h3>
+   </div>-->
+     
+   <div class="imgcontainer" >
+          <img src="images/user.png" alt="Avatar" class="avatar" >
+   </div>
+   
+      <!--<form class="modal-content animate" method="POST"  action="loginprocess.jsp" name="form2" id="form2">-->
+        
        
         
+      <div> 
         
+            <i class="fa fa-users" style="font-size: 20px; color:buttonface"></i>
+            <input  type="text" name="username" id="username" placeholder="ENTER USERNAME"  required class="w3-input  w3-border w3-border-blue w3-round w3-light-gray"/>
+        
+      </div>
+        <!--<i class="fa fa-users" style="font-size: 20px; color: black"></i>--> 
+        
+        
+        <div>
+            <i class="fa fa-lock" style="font-size:25px;color:buttonface"></i>
+            <input type="password" name="password"  id="password" placeholder="ENTER PASSWORD"  required  class="w3-input w3-border w3-border-blue w3-round w3-light-gray"/> 
+        </div>
+        
+        <p>
+        <input type="submit" name="submit" value="LOGIN" class="w3-btn  w3-block w3-border w3-border-blue w3-round w3-blue">
+           <div  class="w3-text-white" id="newuser">
+                <h5>New User? <a href="userregistration.jsp" class="w3-mobile w3-hover-text-red">Register Here</a></h5>
+           </div>
+        </p>
+     
+       
+    </div>
+   </div>    
+    
+    
+    
+    
+    
+    
+    </form>
+         
   </div>
      
  </div>

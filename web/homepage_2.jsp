@@ -55,6 +55,12 @@
                        
                         }
                         
+                  #logo
+                  {
+                      height: 40px;
+                      border-radius: 5px; 
+                  }
+                        
                         
                   #form
                         {
@@ -103,9 +109,9 @@
         
       <a  href="#" class="w3-bar-item w3-button w3-mobile w3-green w3-small"><i class="fa fa-home"></i></a>
       
-      <a  class="w3-myfont w3-medium w3-bar-item">C.G.COMPUTERS</a>
+      <!--<a  class="w3-myfont w3-medium w3-bar-item">VITECH COMPUTERS</a>-->
       
-      <!--<img class="w3-bar-item" src="logo4.jpg">-->
+      <img class="w3-bar-item" src="images\logo\1.jpg" id="logo"  style="width:10%">
       
       <a  href="#" class="w3-bar-item w3-button w3-mobile w3-right w3-medium"><i class="fa fa-globe w3-mobile"></i>On Map</a>
       

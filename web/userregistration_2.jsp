@@ -150,11 +150,11 @@
     
 <div class="w3-container">    
  <!--<h4><center>REGISTER HERE</center></h4>-->
- <div class="w3-card  w3-light-gray w3-round"  id="card1" style="width:40%; margin: 30px auto;">
+ <div class="w3-card  w3-light-gray w3-round"  id="card1" style="width:80%; margin: 30px auto;">
    <!--<div class="w3-container">-->
-    <div class="w3-row w3-border">   
-     <div class="w3-third ">
-       <div  class="w3-card">
+    <div class="w3-row">   
+     <div class="w3-third">
+       <div  class="w3-card ">
 
           <img src="images/11.jpg" alt="Lights" class="w3-image"  style="bottom: 0;">
        </div>
@@ -165,7 +165,7 @@
        </div>-->
        
        
-      <div class="w3-rest w3-container w3-dark-grey "   id="form22">      
+      <div class="w3-rest w3-container  w3-padding w3-dark-grey "   id="form22">      
            <!--<div class="w3-col">-->
        
          <form method="POST" action="registrationprocess.jsp" name="form1" id="form1">

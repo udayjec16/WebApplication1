@@ -1,8 +1,19 @@
-<%-- 
-    Document   : admin
-    Created on : Oct 17, 2018, 1:21:53 AM
-    Author     : chaoshivi
---%>
+
+<%
+    if(session.getAttribute("username")==null)
+        {
+             response.sendRedirect("adminlogin.jsp");
+        }
+    else
+        {
+            String uname = (String)session.getAttribute("username");
+//            out.println(uname);
+            
+%>
+
+
+
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -106,6 +117,228 @@
                             border-radius:15px; 
                         }
                
+                      .imgcontainer
+                        {
+
+                            /*text-align: center;*/
+                            /*margin: 14px 0 5px 0;*/
+                            /*margin-top: 10px;*/
+                            /*margin-bottom: 5px;*/
+
+
+                            /*position: relative;*/
+
+                        }
+                    .avatar 
+                        {
+
+                            /*vertical-align: central;*/
+                            /*width: 190px;*/
+                            /*height: 190px;*/
+                            /*border-radius: 50%;*/
+                        }  
+
+                       
+                        .admin1
+                            {
+                              height: 180px;
+                             
+                              margin-bottom: 50px;
+                              padding-bottom: 90px;
+                            }
+
+                            
+                          #card01
+                          {
+                              /*padding-left: 0px;*/
+                              /*height: 400px;*/
+                              /*margin-left: 60px;*/
+                          }
+                          
+                         #card02 /*admin details*/
+                         {
+                              margin-top:20px;
+                              margin-bottom: 20px;
+                              margin-left: 1px;
+                              margin-right: 5px;   
+                         }
+                          
+                          
+                         #card03  /*add product*/
+                          {
+                              margin-top:20px;
+                              margin-bottom:5px;
+                              margin-left: 5px;
+                              margin-right: 5px;
+                          }
+                          
+                            
+                          #card04  /*view order*/
+                          {
+                              margin-top:5px;
+                              margin-bottom:20px;
+                              margin-left: 5px;
+                              margin-right: 5px;
+                          }
+                          
+                          
+                           #card05 /*view sales*/
+                          {
+                              
+                              height: 140px;
+                              margin-top:20px;
+                              margin-bottom:5px;
+                              /*margin-left: 5px;*/
+                              /*margin-right: 5px;*/
+                          }
+                          
+                          #rcard05
+                          {
+                              /*margin-right: 50px;*/
+                          }
+                          
+                          
+                          #card06  /*view stock*/
+                          {
+                              height: 200px;
+                              margin-top:5px;
+                              margin-bottom:20px;
+                              margin-left: 5px;
+                              margin-right: 5px;
+                          }
+                          
+                          #card07  /*extra*/
+                          {
+                              height: 345px;
+                              margin-top:20px;
+                              margin-bottom:20px;
+                              margin-left: 5px;
+                              margin-right: 5px;
+                          }
+                          
+                          
+                          
+                       #ic02
+                        {
+
+                            text-align: center;
+                            /*margin: 14px 0 5px 0;*/
+                            /*margin-top: 10px;*/
+                            /*margin-bottom: 5px;*/
+
+
+                            /*position: relative;*/
+
+                        }
+                    #av02 
+                        {
+
+                            /*vertical-align: central;*/
+                            width: 190px;
+                            height: 195px;
+                            border-radius: 50%;
+                        } 
+                          
+                          
+                           #ic03
+                          {
+                            text-align: center;
+                            /*margin: 14px 0 5px 0;*/
+                            /*margin-top: 10px;*/
+                            /*margin-bottom: 5px;*/
+
+
+                            position: relative;
+                          }
+                          
+                          #av03
+                          {
+                            width: 100px;
+                            height: 90px;
+                            border-radius: 50%; 
+                          }
+                          
+                          
+                          
+                           #ic04
+                          {
+                            text-align: center;
+                            /*margin: 14px 0 5px 0;*/
+                            /*margin-top: 10px;*/
+                            /*margin-bottom: 5px;*/
+
+
+                            position: relative;
+                          }
+                          
+                          #av04
+                          {
+                            width: 90px;
+                            height: 70px;
+                            border-radius: 10%; 
+                          }
+                          
+                          
+                          
+                          
+                           #ic05
+                          {
+                            text-align: center;
+                            /*margin: 14px 0 5px 0;*/
+                            /*margin-top: 10px;*/
+                            /*margin-bottom: 5px;*/
+
+
+                            /*position: relative;*/
+                          }
+                          
+                          #av05
+                          {
+                            width: 90px;
+                            height: 80px;
+                            border-radius: 50%; 
+                          }
+                          
+                          
+                          #ic06
+                          {
+                            text-align: center;
+                            /*margin: 14px 0 5px 0;*/
+                            /*margin-top: 10px;*/
+                            /*margin-bottom: 5px;*/
+
+
+                            position: relative;
+                          }
+                          
+                          #av06
+                          {
+                            width: 90px;
+                            height: 90px;
+                            border-radius: 50%; 
+                          }
+                          
+                          
+                           #ic07
+                          {
+                            text-align: center;
+                            /*margin: 14px 0 5px 0;*/
+                            /*margin-top: 10px;*/
+                            /*margin-bottom: 5px;*/
+
+
+                            position: relative;
+                          }
+                          
+                          #av07
+                          {
+                            width: 90px;
+                            height: 100px;
+                            border-radius: 50%; 
+                          }
+                          
+                          
+                          
             </style>
  </head>
  <body>
@@ -120,22 +353,154 @@
       
       <!--<img class="w3-bar-item" src="logo4.jpg">-->
       
-      <a  href="#" class="w3-bar-item w3-button w3-mobile w3-right w3-medium"><i class="fa fa-globe w3-mobile"></i>On Map</a>
+      <a  href="#" class="w3-bar-item w3-button w3-mobile w3-right w3-small"><i class="fa fa-power-off w3-mobile"></i>LOG OUT</a>
       
       <!--<a  href="#" class="w3-bar-item w3-button w3-mobile w3-right w3-large"><i class="fa fa-bars"></i>About Us</a>-->
       
-      <a  href="#" class="w3-bar-item w3-button w3-mobile w3-right w3-medium"><i class="fa fa-truck"></i>Track</a>
+      <a  href="#" class="w3-bar-item w3-button w3-mobile w3-right w3-small"><i class="fa fa-truck"></i>Track</a>
       
-      <a  href="login.jsp" class="w3-bar-item w3-button w3-mobile w3-right w3-medium"><i class="fa fa-male"></i>LogIn</a>
+      <a  href="login.jsp" class="w3-bar-item w3-button w3-mobile w3-right w3-small"><i class="fa fa-male"></i>LogIn</a>
      
       
-      <a  href="userregistration.jsp" class="w3-bar-item w3-button w3-mobile w3-right w3-medium"><i class="fa fa-sign-in"></i>SignUp</a>
+      <a  href="userregistration.jsp" class="w3-bar-item w3-button w3-mobile w3-right w3-small"><i class="fa fa-sign-in"></i>SignUp</a>
       
       <input type="text" id="search" class="w3-bar-item w3-small w3-input w3-white w3-mobile" placeholder="Search for Product">         
-      <button class="w3-bar-item w3-small w3-mobile" id="searchbutton" type="submit"><i class="fa fa-search"></i></button>
+      <button class="w3-bar-item w3-medium w3-mobile" id="searchbutton" type="submit"><i class="fa fa-search"></i></button>
                 
     </div>  
    </div>
+   
+   <div class="w3-container">
+       <div class="w3-panel w3-pink">
+           <p>sdjkbcbhsdbc</p>
+           
+       </div>
+           
+   </div>
+   
+   
+   
+   
+<div class="w3-card w3-light-gray " id="card01" style="width:85%; margin:60px auto;">
+ <div class="w3-container">
+   <div class="w3-row">
+     <div class="w3-third">
+       
+        <div class=" w3-card w3-round w3-hover-light-green w3-padding-24 w3-orange" id="card02">
+           <div class="imgcontainer" id="ic02">
+               <img src="images/user/user13.png" alt="Avatar" class="avatar" id="av02" >
+                <div class="w3-text-white" id="detail1">
+                    <P>
+                       <h3> ADMIN DETAILS</h3>
+                       <h5>Add/edit or delete admin details</h5>
+
+                    </P>
+                </div>
+           </div>
+           
+        </div>
+      </div>
+        
+        <!--<div class="w3-row">-->
+        <div class=" w3-quarter">
+           <div class="w3-card w3-round w3-yellow w3-hover-lime w3-padding-16" id="card03">
+              <div class="imgcontainer" id="ic03">
+                   <img src="images/icon/12.png" alt="Avatar" class="avatar" id="av03" >
+                 <div class="w3-text-white w3-container">
+                    <P>
+                       <h3> ADD PRODUCT</h3>
+                       <!--<h5>Add/edit or delete admin details</h5>-->
+
+                    </P>
+                </div> 
+              </div>  
+             </div>
+             
+             <div class="w3-card w3-round w3-padding w3-green  w3-hover-teal" id="card04";>
+               <div class="imgcontainer" id="ic04">
+                   <img src="images/icon/18.png" alt="Avatar" class="avatar" id="av04" >  
+               
+                <div class="w3-text-white w3-container" >
+                    <P>
+                       <h3> EMPLOYEE</h3>
+                       
+                    </P>
+                </div> 
+               </div> 
+             </div>      
+         </div>
+         
+         
+        <div class=" w3-quarter"  id="rcard05">
+           <div class="w3-card w3-round w3-padding w3-pink w3-hover-sepia" id="card05">
+              <div class="imgcontainer" id="ic05">
+                   <img src="images/icon/icon1.png" alt="Avatar" class="avatar" id="av05" >
+                <div class="w3-text-white w3-container">
+                    <P>
+                       <h3> VIEW SALES</h3>
+                       <!--<h5>Click me view sales </h5>-->
+                       
+                       
+
+                    </P>
+                </div> 
+                 
+             </div>
+           </div>
+             
+             
+             
+              
+             <div class="w3-card w3-round w3-purple w3-hover-indigo w3-padding-32" id="card06">
+               <div class="imgcontainer" id="ic06">
+                   <img src="images/icon/icon5.jpg" alt="Avatar" class="avatar" id="av06" >
+                 <div class="w3-text-white w3-container">
+                    
+                    <P>
+                    <center> <h3> VIEW STOCK</h3>
+                    </P>
+                </div>
+             </div>
+                 
+             </div>
+             
+         </div>
+        
+        
+        <div class=" w3-rest"  id="rcard07">
+             <div class="w3-card w3-round w3-padding w3-deep-purple w3-hover-cyan" id="card07">
+                <div class="imgcontainer" id="ic07">
+                   <img src="images/icon/1112.png" alt="Avatar" class="avatar" id="av07" >
+                 <div class="w3-text-white w3-container">
+                    <P>
+                       <h3> VIEW SALES</h3>
+                       <h5>Click me view sales </h5>
+                    </P>
+                </div> 
+             </div> 
+             </div>
+        </div>
+         
+        </div>   
+         
+    </div>   
+         
+ </div>  <!--row1-->
+        
+        
+        
+ 
+       
+       
+      
+       
+       
+       
+ 
+       
+       
+       
+       
         
        
         
@@ -150,10 +515,15 @@
         
         
         
-     <div style="width:100%;  bottom:0;">   <!--/*position:fixed;*/-->
+     <div style="width:100%;  bottom:0;">  <!-- /*position:fixed;*/-->
        <%@include file="footer1.jsp"%> 
     </div>
         
         
     </body>
 </html>
+
+
+<%
+  }  
+%>
