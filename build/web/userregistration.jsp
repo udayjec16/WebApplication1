@@ -21,6 +21,15 @@
 	                }
                         
                         
+            .w3-button
+                        {
+                            border-radius:5px; 
+                               
+                        } 
+                        
+                        
+                        
+                        
               .w3-card
             {
                 
@@ -106,19 +115,17 @@
   <div class="w3-row">
    <div class="w3-bar   w3-blue w3-padding" id="bar">
         
-      <a  href="homepage_2.jsp" class="w3-bar-item w3-button w3-mobile w3-green w3-small"><i class="fa fa-home"></i></a>
+      <a  href="index.jsp" class="w3-bar-item w3-button w3-mobile w3-green w3-small"><i class="fa fa-home"></i></a>
       
-      <a  class="w3-myfont w3-medium w3-bar-item">C.G.COMPUTERS</a>
-      
-      <!--<img class="w3-bar-item" src="logo4.jpg">-->
-      
+      <img class="w3-bar-item  w3-small w3-mobile" src="images\logo\lo4.png"  id="log0" style="width:10%;"/>
+            
       <a  href="#" class="w3-bar-item w3-button w3-mobile w3-right w3-medium"><i class="fa fa-globe w3-mobile"></i>On Map</a>
       
       <!--<a  href="#" class="w3-bar-item w3-button w3-mobile w3-right w3-large"><i class="fa fa-bars"></i>About Us</a>-->
       
       <a  href="#" class="w3-bar-item w3-button w3-mobile w3-right w3-medium"><i class="fa fa-truck"></i>Track</a>
       
-      <a  href="login.jsp" class="w3-bar-item w3-button w3-mobile w3-right w3-medium"><i class="fa fa-male"></i>LogIn</a>
+      <a  href="index.jsp" class="w3-bar-item w3-button w3-mobile w3-right w3-medium"><i class="fa fa-male"></i>LogIn</a>
       
       <a  href="userregistration.jsp" class="w3-bar-item w3-button w3-mobile w3-right w3-medium"><i class="fa fa-sign-in"></i>SignUp</a>
       
@@ -153,7 +160,7 @@
        
        <div class="w3-row">  
            
-           <div class="w3-col">
+        <div class="w3-col">
        
          <form method="POST" action="registrationprocess.jsp" name="form1" id="form1">
            <p>  
@@ -180,7 +187,7 @@
            </p>
            
            <p>
-               <input type="submit" name="submit" value="REGISTER"  class="w3-btn w3-block w3-green w3-border w3-border-blue w3-round">
+               <input type="submit" name="submit" value="REGISTER"  class="w3-btn w3-block w3-green   w3-round">
                
            </p>
          

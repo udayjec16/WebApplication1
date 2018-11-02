@@ -224,9 +224,9 @@
         
       <a  href="#" class="w3-bar-item w3-button w3-mobile w3-green w3-small"><i class="fa fa-home"></i></a>
       
-      <a  class="w3-myfont w3-medium w3-bar-item">C.G.COMPUTERS</a>
+      <!--<a  class="w3-myfont w3-medium w3-bar-item">C.G.COMPUTERS</a>-->
       
-      <!--<img class="w3-bar-item" src="logo4.jpg">-->
+      <img class="w3-bar-item" src="images/logo/lo4.png">
       
       <a  href="#" class="w3-bar-item w3-button w3-mobile w3-right w3-medium"><i class="fa fa-globe w3-mobile"></i>On Map</a>
       
@@ -327,13 +327,11 @@
    <div class="w3-row w3-small w3-border" id="bar2">
        
        
-       <button onclick="document.getElementById('id01').style.display='block'" 
-                class="w3-bar-item w3-button w3-mobile  w3-medium" style="width:auto;">
-        <i class="fa fa-male"></i>Admin</button>
+      
    
-    <!--<div class="w3-col m5  w3-center">
-      <a  href="admin.jsp" class="w3-mobile  w3-medium">ADMIN</a>
-    </div>-->
+    <div class="w3-col m5  w3-center">
+      <a  href="adminlogin.jsp" class="w3-mobile  w3-medium">ADMIN</a>
+    </div>
     
     
         <div class="w3-col m2  w3-center">

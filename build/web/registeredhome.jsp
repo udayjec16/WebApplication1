@@ -1,4 +1,12 @@
+<%
+	if (session.getAttribute("username") == null)
+	{
+		response.sendRedirect("index.jsp?log=0");
+                return;
+	}
+	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -113,10 +121,24 @@
       
       <a  href="#" class="w3-bar-item w3-button w3-mobile w3-right w3-medium"><i class="fa fa-truck"></i>Track</a>
       
+      <%
+	  if(session.getAttribute("username")==null)
+          {
+	  %>
       <a  href="login.jsp" class="w3-bar-item w3-button w3-mobile w3-right w3-medium"><i class="fa fa-male"></i>LogIn</a>
       
       <a  href="userregistration.jsp" class="w3-bar-item w3-button w3-mobile w3-right w3-medium"><i class="fa fa-sign-in"></i>SignUp</a>
+      <%
+          }
+          else
+          {
+            String uname=session.getAttribute("username").toString();
+      %>
+      <a  href="logout.jsp" class="w3-bar-item w3-button w3-mobile w3-right w3-medium"><i class="fa fa-male"></i>Logout</a>
+      <a  href="#" class="w3-bar-item w3-button w3-mobile w3-right w3-medium">Welcome <% out.print(uname); %></a>         
       
+        <%    }
+          %>
       <input type="text" id="search" class="w3-bar-item w3-small w3-input w3-white w3-mobile" placeholder="Search for Product">         
       <button class="w3-bar-item w3-small w3-mobile" id="searchbutton" type="submit"><i class="fa fa-search"></i></button>
                 

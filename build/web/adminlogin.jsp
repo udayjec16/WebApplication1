@@ -147,11 +147,9 @@
 <div class="w3-row">
  <div class="w3-bar   w3-blue w3-padding" id="bar">
         
-      <a  href="homepage_2.jsp" class="w3-bar-item w3-button w3-mobile w3-green w3-small"><i class="fa fa-home"></i></a>
+      <a  href="index.jsp" class="w3-bar-item w3-button w3-mobile w3-green w3-small"><i class="fa fa-home"></i></a>
       
-      <a  class="w3-myfont w3-medium w3-bar-item">VITECH COMPUTERS</a>
-      
-      <!--<img class="w3-bar-item" src="logo4.jpg">-->
+      <img class="w3-bar-item  w3-small w3-mobile" src="images\logo\lo4.png"  id="log0" style="width:10%;"/>
       
       <a  href="#" class="w3-bar-item w3-button w3-mobile w3-right w3-medium"><i class="fa fa-globe w3-mobile"></i>On Map</a>
       
@@ -218,7 +216,7 @@
 <%
 	if(request.getParameter("log")!=null)
 	{
-		out.print("<script> alert('Incorrect Password'); </script>");	
+		out.print("<script> alert('Incorrect Username or Password'); </script>");	
 	}
 %>
 

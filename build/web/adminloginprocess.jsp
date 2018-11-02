@@ -1,3 +1,4 @@
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%@include file="connect.jsp"%>
@@ -14,23 +15,31 @@
       String sql="select password from admin where username='"+ uname +"'";
       
       rs=st.executeQuery(sql); //ResultSet
-      
+      String pwd="";
       while(rs.next())
        {
-           String pwd=rs.getString(1);
-		   if(paswrd.equals(pwd))
-		   {
-		   	session.setAttribute("username",uname);
-           		response.sendRedirect("admin.jsp");
-			return;
-		   }
-		   else
-		   {
-			response.sendRedirect("adminlogin.jsp");  /*?log=0*/
-                        
-		   }
-           
+           pwd=rs.getString(1);
        }
+       rs.last();
+			int n=rs.getRow();
+			if(n==0)
+			{
+                            response.sendRedirect("adminlogin.jsp?log=0");	
+			}
+			else
+			{
+                            if(paswrd.equals(pwd))
+                            {
+                                 session.setAttribute("username",uname);
+                                 response.sendRedirect("admin.jsp");
+                                 return;
+                            }
+                            else
+                            {
+                                 response.sendRedirect("adminlogin.jsp?log=0");  /*?log=0*/
+
+                            }
+                        }
      
         
      

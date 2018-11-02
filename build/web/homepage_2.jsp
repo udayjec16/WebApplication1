@@ -57,8 +57,10 @@
                         
                   #logo
                   {
-                      height: 40px;
-                      border-radius: 5px; 
+                      /*height: 50px;*/
+                      /*border-radius: 5px;*/ 
+                      /*margin-bottom: 32px;*/
+                      /*margin-top:0px;*/
                   }
                         
                         
@@ -99,6 +101,14 @@
                             border-radius:15px; 
                         }
                
+                        
+                         #av01
+                          {
+                            /*width: 1300px;*/
+                            height:85px;
+                            /*border-radius: 50%;*/ 
+                            margin-top: 5px;
+                          }
             </style>
  </head>
  <body>
@@ -107,12 +117,12 @@
    <div class="w3-row">
    <div class="w3-bar   w3-blue w3-padding" id="bar">
         
-      <a  href="#" class="w3-bar-item w3-button w3-mobile w3-green w3-small"><i class="fa fa-home"></i></a>
+      <a  href="homepage_2.jsp" class="w3-bar-item w3-button w3-mobile w3-green w3-small"><i class="fa fa-home"></i></a>
       
-      <!--<a  class="w3-myfont w3-medium w3-bar-item">VITECH COMPUTERS</a>-->
+      <!--<a  class="w3-myfont w3-medium w3-bar-item">V-TECH COMPUTERS</a>-->
       
-      <img class="w3-bar-item" src="images\logo\1.jpg" id="logo"  style="width:10%">
-      
+      <img class="w3-bar-item  w3-small w3-mobile" src="images\logo\lo4.png"  id="log0" style="width:10%;"/>
+ 
       <a  href="#" class="w3-bar-item w3-button w3-mobile w3-right w3-medium"><i class="fa fa-globe w3-mobile"></i>On Map</a>
       
       <!--<a  href="#" class="w3-bar-item w3-button w3-mobile w3-right w3-large"><i class="fa fa-bars"></i>About Us</a>-->
@@ -306,7 +316,7 @@ function showDivs(n)
 
 
 
-    <div style="width:100%;  bottom:0;">   /*position:fixed;*/
+    <div style="width:100%;  bottom:0;">   <!--/*position:fixed;*/-->
        <%@include file="footer1.jsp"%> 
     </div>
 

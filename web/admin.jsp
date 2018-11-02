@@ -1,17 +1,18 @@
-
 <%
-    if(session.getAttribute("username")==null)
-        {
-             response.sendRedirect("adminlogin.jsp");
-        }
-    else
-        {
+	if (session.getAttribute("username") == null)
+	{
+		response.sendRedirect("index.jsp?log=0");
+                return;
+	}
+        
+        else
+         {
             String uname = (String)session.getAttribute("username");
 //            out.println(uname);
-            
+          
+            response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+
 %>
-
-
 
 
 
@@ -209,6 +210,7 @@
                           
                           #card07  /*extra*/
                           {
+                              text-decoration: none;
                               height: 345px;
                               margin-top:20px;
                               margin-bottom:20px;
@@ -347,37 +349,34 @@
    <div class="w3-row">
    <div class="w3-bar   w3-blue w3-padding" id="bar">
         
-      <a  href="homepage_2.jsp" class="w3-bar-item w3-button w3-mobile w3-green w3-small"><i class="fa fa-home"></i></a>
+      <a  href="index.jsp" class="w3-bar-item w3-button w3-mobile w3-green w3-small"><i class="fa fa-home"></i></a>
       
-      <a  class="w3-myfont w3-medium w3-bar-item">C.G.COMPUTERS</a>
-      
-      <!--<img class="w3-bar-item" src="logo4.jpg">-->
-      
-      <a  href="#" class="w3-bar-item w3-button w3-mobile w3-right w3-small"><i class="fa fa-power-off w3-mobile"></i>LOG OUT</a>
-      
-      <!--<a  href="#" class="w3-bar-item w3-button w3-mobile w3-right w3-large"><i class="fa fa-bars"></i>About Us</a>-->
-      
-      <a  href="#" class="w3-bar-item w3-button w3-mobile w3-right w3-small"><i class="fa fa-truck"></i>Track</a>
-      
-      <a  href="login.jsp" class="w3-bar-item w3-button w3-mobile w3-right w3-small"><i class="fa fa-male"></i>LogIn</a>
+       <img class="w3-bar-item  w3-small w3-mobile" src="images\logo\lo4.png"  id="log0" style="width:10%;"/>
      
+      <a  href="logout.jsp" class="w3-bar-item w3-button w3-mobile w3-right w3-medium"><i class="fa fa-power-off w3-mobile"></i>Log Out</a>
       
-      <a  href="userregistration.jsp" class="w3-bar-item w3-button w3-mobile w3-right w3-small"><i class="fa fa-sign-in"></i>SignUp</a>
+      <!--<a  href="userregistration.jsp" class="w3-bar-item w3-button w3-mobile w3-right w3-small"><i class="fa fa-sign-in"></i>SignUp</a>-->
       
       <input type="text" id="search" class="w3-bar-item w3-small w3-input w3-white w3-mobile" placeholder="Search for Product">         
-      <button class="w3-bar-item w3-medium w3-mobile" id="searchbutton" type="submit"><i class="fa fa-search"></i></button>
+      <button class="w3-bar-item w3-small w3-mobile" id="searchbutton" type="submit"><i class="fa fa-search"></i></button>
                 
     </div>  
    </div>
    
+   
+    
+   
    <div class="w3-container">
        <div class="w3-panel w3-pink">
-           <p>sdjkbcbhsdbc</p>
-           
+           <p>WELCOME
+           <%
+           out.println(uname);
+           %>
+           </p>
        </div>
            
    </div>
-   
+     
    
    
    
@@ -385,24 +384,26 @@
  <div class="w3-container">
    <div class="w3-row">
      <div class="w3-third">
-       
+       <a href="admindetails.jsp"  style="text-decoration: none;"> 
         <div class=" w3-card w3-round w3-hover-light-green w3-padding-24 w3-orange" id="card02">
            <div class="imgcontainer" id="ic02">
                <img src="images/user/user13.png" alt="Avatar" class="avatar" id="av02" >
                 <div class="w3-text-white" id="detail1">
                     <P>
                        <h3> ADMIN DETAILS</h3>
-                       <h5>Add/edit or delete admin details</h5>
+                       <h5>Add edit or delete admin details</h5>
 
                     </P>
                 </div>
            </div>
            
         </div>
+       </a>
       </div>
         
         <!--<div class="w3-row">-->
         <div class=" w3-quarter">
+          <a href="addproduct.jsp"  style="text-decoration: none;">   
            <div class="w3-card w3-round w3-yellow w3-hover-lime w3-padding-16" id="card03">
               <div class="imgcontainer" id="ic03">
                    <img src="images/icon/12.png" alt="Avatar" class="avatar" id="av03" >
@@ -415,7 +416,9 @@
                 </div> 
               </div>  
              </div>
-             
+          </a>  
+              
+            <a href="employee.jsp"  style="text-decoration: none;">  
              <div class="w3-card w3-round w3-padding w3-green  w3-hover-teal" id="card04";>
                <div class="imgcontainer" id="ic04">
                    <img src="images/icon/18.png" alt="Avatar" class="avatar" id="av04" >  
@@ -427,30 +430,30 @@
                     </P>
                 </div> 
                </div> 
-             </div>      
+             </div> 
+            </a>
          </div>
          
          
         <div class=" w3-quarter"  id="rcard05">
+          <a href="sales.jsp"  style="text-decoration: none;"> 
            <div class="w3-card w3-round w3-padding w3-pink w3-hover-sepia" id="card05">
               <div class="imgcontainer" id="ic05">
                    <img src="images/icon/icon1.png" alt="Avatar" class="avatar" id="av05" >
                 <div class="w3-text-white w3-container">
                     <P>
                        <h3> VIEW SALES</h3>
-                       <!--<h5>Click me view sales </h5>-->
-                       
-                       
-
+ 
                     </P>
                 </div> 
                  
              </div>
            </div>
+          </a>
              
              
              
-              
+           <a href="stock.jsp"  style="text-decoration: none;">   
              <div class="w3-card w3-round w3-purple w3-hover-indigo w3-padding-32" id="card06">
                <div class="imgcontainer" id="ic06">
                    <img src="images/icon/icon5.jpg" alt="Avatar" class="avatar" id="av06" >
@@ -459,26 +462,30 @@
                     <P>
                     <center> <h3> VIEW STOCK</h3>
                     </P>
-                </div>
-             </div>
+                 </div>
+               </div>
                  
              </div>
+           </a>
              
          </div>
         
         
         <div class=" w3-rest"  id="rcard07">
-             <div class="w3-card w3-round w3-padding w3-deep-purple w3-hover-cyan" id="card07">
+            
+            <a href=""  style="text-decoration: none;"> 
+               <div class="w3-card w3-round w3-padding w3-deep-purple w3-hover-cyan" id="card07">
                 <div class="imgcontainer" id="ic07">
                    <img src="images/icon/1112.png" alt="Avatar" class="avatar" id="av07" >
-                 <div class="w3-text-white w3-container">
+                   <div class="w3-text-white  w3-container">
                     <P>
                        <h3> VIEW SALES</h3>
                        <h5>Click me view sales </h5>
                     </P>
+                   </div> 
                 </div> 
-             </div> 
-             </div>
+              </div>
+            </a>
         </div>
          
         </div>   
@@ -486,32 +493,6 @@
     </div>   
          
  </div>  <!--row1-->
-        
-        
-        
- 
-       
-       
-      
-       
-       
-       
- 
-       
-       
-       
-       
-        
-       
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         
@@ -523,7 +504,6 @@
     </body>
 </html>
 
-
 <%
-  }  
+    }
 %>

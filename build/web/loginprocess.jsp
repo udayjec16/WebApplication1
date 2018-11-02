@@ -26,7 +26,7 @@
 		   }
 		   else
 		   {
-			response.sendRedirect("login.jsp?log=0");
+			response.sendRedirect("index.jsp?log=0");
 		   }
            
        }
