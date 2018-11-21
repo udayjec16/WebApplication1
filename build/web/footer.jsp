@@ -36,7 +36,7 @@
         
       
         <div class="w3-bar w3-black"  id="footer">
-		<h9>&copy; 2018  VITECH COMPUTERS </h9>
+		<h9>&copy; 2018  V-TECH COMPUTERS </h9>
 		<p>Delevoped by -- Uday & Ankur</p>
 	</div>
         

@@ -1,3 +1,5 @@
+<%@page import="java.sql.*"%>
+<%@include file="connect.jsp"%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -32,7 +34,6 @@
                          width:40%; 
                          border-radius:5px;
                         }
-                        
                         
                   #searchbutton{
                          
@@ -207,12 +208,12 @@
                         }
                         
                       
-                        .w3-card
+                        /*.w3-card
                             {
                                 border-top: 30px;
                                 margin-top: 30px;
-                                background-color:#086592e3!important; /*#0865925e!important;*/  
-                            }
+                                background-color:#086592e3!important; 
+                            }*/
                         
                
             </style>
@@ -315,29 +316,7 @@
       
     </div>  
    </div>
-     
- 
-  
-   <div class="w3-row w3-small w3-border" id="bar2">
-       
-       
-      
-   
-    <div class="w3-col m5  w3-center">
-      <a  href="adminlogin.jsp" class="w3-mobile  w3-medium">ADMIN</a>
-    </div>
-    
-    
-        <div class="w3-col m2  w3-center">
-          <a  href="products.jsp" class="w3-mobile  w3-medium">PRODUCTS</a>
-        </div>
-        <div class="w3-col m5  w3-center">
-            <a  href="aboutus.jsp" class="w3-mobile  w3-medium">ABOUTUS</a>
-        </div>
-   </div>
-        
-     
-        
+         
     
   <div class="w3-content  w3-mobile" id="slide" style="max-width:100% "> 
     
@@ -365,116 +344,97 @@
     <button class="w3-button w3-white w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
     <button class="w3-button w3-white w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 </div>
+
+<div class="w3-row">
+<div class="w3-quarter w3-padding-16 w3-border-right">
+	<div class="w3-container">
+    	<h5 class="w3-border-bottom">Product Type</h5>
+        <ul>
+        	<li>Laptop</li>
+            <li>Desktop</li>
+            <li>Storage Devices</li>
+            <li>Accessories</li>
+            <li>Input Devices</li>
+        </ul>
+        
+        <h5 class="w3-border-bottom">Brand</h5>
+        <ul>
+        	<li>Laptop</li>
+            <li>Desktop</li>
+            <li>Storage Devices</li>
+            <li>Accessories</li>
+            <li>Input Devices</li>
+        </ul>
+    </div>
 </div>
 
-
-
-<div class="w3-container">
+<div class="w3-threequarter">
+	<div class="w3-container w3-border-bottom">
+    	<div class="w3-left">
+    		<h3>Latest Products</h3>
+        </div>
+        <div class="w3-right" style="padding-top:16px;">
+        	Sort Products Price:&nbsp; <a href="index.jsp?sort=asc"><img src="images/asc.png" class="w3-card" title="Sort Ascending" style="width:25px;"></a>&nbsp;&nbsp;<a href="index.jsp?sort=desc"><img src="images/desc.png" class="w3-card" title="Sort Descending"  style="width:25px;"></a>
+        </div>
+    </div>
+    <div class="w3-container" style="margin-top:16px;">
+    	<div class="w3-row-padding">
+        	<%
+				Statement st=con.createStatement();
+				Statement st1=con.createStatement();
+				ResultSet rs1=null;
+				String sql="Select * from productdetails limit 12";
+				rs=st.executeQuery(sql);
+				String pid="";
+				String pname="";
+				String brand="";
+				String price="";
+				while(rs.next())
+				{
+					pid=rs.getString(1);
+					String sql1="Select image from pimage where productid='"+ pid +"'";
+					rs1=st1.executeQuery(sql1);
+					String image="";
+					while(rs1.next())
+					{
+						image=rs1.getString(1);
+					}
+					pname=rs.getString(2);
+					brand=rs.getString(3);
+					price=rs.getString(5);
+					out.print("<div class='w3-quarter w3-small'>");
+					out.print("<div class='w3-light-gray w3-center w3-card' style='padding:8px; height:200px; line-height:1.5;'>");
+					out.print("<img src='products/"+ image +"' style='width:100%; height:110px;'><br>");
+					out.print(brand +" "+ pname +"<br>Rs. "+ price +"<br>");
+					out.print("<a href='addtocart.jsp?pid="+ pid +"' class='w3-btn w3-round w3-blue w3-tiny'>Add to Cart</a>");
+					out.print("</div>");
+					out.print("</div>");
+				}
+			%>
+        </div>
+    </div>
+</div> 
     
-<div class="row w3-padding-24">
- 
- 
-  <div class="w3-col m3"  id="form">
-      <form method="post" action="" >
-        
-     <div class="w3-card-4 w3-hover-shadow "  style="width:100%">
-       <img src="1.jpg" alt="Norway" style="width:100%">
-         <div class="w3-container w3-center">
-          <a  href="#" class="w3-button w3-mobile w3-center w3-large">Add TO Cart</a>
-         </div>
-     </div>
-      
-      
-      
-       <div class="w3-card-4 w3-hover-shadow "  style="width:100%">
-       <img src="1.jpg" alt="Norway" style="width:100%">
-         <div class="w3-container w3-center">
-          <a  href="#" class="w3-button w3-mobile w3-center w3-large">Add TO Cart</a>
-         </div>
-       </div>
-      
-      
-      
-       <div class="w3-card-4 w3-hover-shadow "  style="width:100%">
-       <img src="1.jpg" alt="Norway" style="width:100%">
-         <div class="w3-container w3-center">
-          <a  href="#" class="w3-button w3-mobile w3-center w3-large">Add TO Cart</a>
-         </div>
-      </div>
-        
-     
-    </form>
-   </div>
-    
-    
-    
-    
-    
-   <div class="w3-col m4"id="form1"> 
-   <form method="post" action="" >
-    <!--<div class="row" id="form1">-->
-  
-    
-            
-            
-       <div class="w3-card-4 w3-hover-shadow "  style="width:50%">
-       <img src="1.jpg" alt="Norway" style="width:100%">
-         <div class="w3-container w3-center">
-          <a  href="#" class="w3-button w3-mobile w3-center w3-large">Add TO Cart</a>
-         </div>
-       </div>
-     <!--</div>-->
-         
-     <div class="w3-col m4" id="form1">
-      <div class="w3-card-4 w3-hover-shadow "  style="width:50%">
-       <img src="1.jpg" alt="Norway" style="width:100%">
-         <div class="w3-container w3-center">
-          <a  href="#" class="w3-button w3-mobile w3-center w3-large">Add TO Cart</a>
-         </div>
-       </div>
-          
-       </div>
-    <!--</div>-->
-     
-    
-    
-    
+</div>    
     
 
 
+<!--Modal Login-->
  <div id="id01" class="modal">
- 
-  
-   <!--<form class="modal-content animate" action="/action_page.php">-->
    <form class="modal-content animate" method="POST"  action="loginprocess.jsp" name="form2" id="form2">
-   
-    <!--<div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      
-    </div>-->
-     
-     
-<div class="w3-card  w3-light-gray w3-round"  id="login"  style="width:35%; margin: 30px auto;">
-   
-    
+	<div class="w3-card  w3-light-gray w3-round"  id="login"  style="width:35%; margin: 30px auto;">
        <div class="imgcontainer">
           <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      
        </div>
-       
-<div class="w3-container">
+	<div class="w3-container">
      
-   <div class="imgcontainer" >
+   		<div class="imgcontainer" >
           <img src="images/user.png" alt="Avatar" class="avatar" >
-   </div>
-         
-      <div> 
-        
-            <i class="fa fa-users" style="font-size: 20px; color:buttonface"></i>
-            <input  type="text" name="username" id="username" placeholder="ENTER USERNAME"  required class="w3-input  w3-border w3-border-blue w3-round w3-light-gray"/>
-        
-      </div>
-               
+   		</div>
+    <div> 
+	<i class="fa fa-users" style="font-size: 20px; color:buttonface"></i>
+    <input  type="text" name="username" id="username" placeholder="ENTER USERNAME"  required class="w3-input  w3-border w3-border-blue w3-round w3-light-gray"/>
+      </div>      
         <div>
             <i class="fa fa-lock" style="font-size:25px;color:buttonface"></i>
             <input type="password" name="password"  id="password" placeholder="ENTER PASSWORD"  required  class="w3-input w3-border w3-border-blue w3-round w3-light-gray"/> 
@@ -486,30 +446,11 @@
                 <h5>New User? <a href="userregistration.jsp" class="w3-mobile w3-hover-text-red">Register Here</a></h5>
            </div>
         </p>
-     
-       
     </div>
    </div>    
-    
-    
-    
-    
-    
-    
     </form>
          
   </div>
-     
- </div>
-        
-    
-</div>
-</div>
-
-
-
-
-
 <script>
 var myIndex = 0;
 carousel();
@@ -548,10 +489,6 @@ function showDivs(n)
   x[slideIndex-1].style.display = "block";  
 }
 
-
-
-
-// Get the modal
 var modal = document.getElementById('id01');
 
 // When the user clicks anywhere outside of the modal, close it
@@ -563,13 +500,7 @@ window.onclick = function(event) {
 
 
 </script>
-
-
-
-
-    </body>
-    
-</div>
+</body>
 </html>
 <%
 	if(request.getParameter("log")!=null)

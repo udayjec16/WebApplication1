@@ -367,12 +367,12 @@
     
    
    <div class="w3-container">
-       <div class="w3-panel w3-pink">
-           <p>WELCOME
+       <div class="w3-panel w3-round w3-pink" style="width:85%; margin: 20px auto;">
+           <p><center><h3>WELCOME :
            <%
            out.println(uname);
            %>
-           </p>
+               </h3></center></p>
        </div>
            
    </div>
@@ -380,7 +380,7 @@
    
    
    
-<div class="w3-card w3-light-gray " id="card01" style="width:85%; margin:60px auto;">
+<div class="w3-card w3-light-gray " id="card01" style="width:85%; margin:50px auto;">
  <div class="w3-container">
    <div class="w3-row">
      <div class="w3-third">
@@ -418,7 +418,7 @@
              </div>
           </a>  
               
-            <a href="employee.jsp"  style="text-decoration: none;">  
+            <a href="employe.jsp"  style="text-decoration: none;">  
              <div class="w3-card w3-round w3-padding w3-green  w3-hover-teal" id="card04";>
                <div class="imgcontainer" id="ic04">
                    <img src="images/icon/18.png" alt="Avatar" class="avatar" id="av04" >  
@@ -473,14 +473,14 @@
         
         <div class=" w3-rest"  id="rcard07">
             
-            <a href=""  style="text-decoration: none;"> 
+            <a href="outofstock.jsp"  style="text-decoration: none;"> 
                <div class="w3-card w3-round w3-padding w3-deep-purple w3-hover-cyan" id="card07">
                 <div class="imgcontainer" id="ic07">
                    <img src="images/icon/1112.png" alt="Avatar" class="avatar" id="av07" >
                    <div class="w3-text-white  w3-container">
                     <P>
-                       <h3> VIEW SALES</h3>
-                       <h5>Click me view sales </h5>
+                       <h3> OUT of SOCK</h3>
+                       <h5>Click me to view out of stock product  </h5>
                     </P>
                    </div> 
                 </div> 
